@@ -1,0 +1,12 @@
+spring:
+    profiles: default
+    application:
+        name: auth_service
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:1111/eureka/
+    instance:
+        leaseRenewalIntervalInSeconds: 5
+server:
+    port: 9000
