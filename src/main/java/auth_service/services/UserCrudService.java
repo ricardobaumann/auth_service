@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
+import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
 import java.util.Set;
 
@@ -23,6 +24,7 @@ public class UserCrudService {
     @Autowired
     private RoleRepository roleRepository;
 
+    @RolesAllowed({"ROLE_ADMIN"})
     public User save(@Valid @Validated User user) {
         return userRepository.save(user);
     }
