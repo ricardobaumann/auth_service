@@ -15,15 +15,13 @@ import java.util.Set;
  */
 @RestController
 @RequestMapping(
-        consumes = "application/json",
-        path = "/users",
-        produces = "application/json")
+        path = "/users")
 public class UserController {
 
     @Autowired
     private UserCrudService userCrudService;
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST,consumes = "application/json", produces = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public User post(@RequestBody UserInputDTO userInputDTO) {
         User user = new User();
@@ -38,9 +36,6 @@ public class UserController {
         return userCrudService.save(user);
     }
 
-    @RequestMapping("/user")
-    public Principal user(Principal user) {
-        return user;
-    }
+
 
 }

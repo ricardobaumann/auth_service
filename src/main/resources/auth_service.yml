@@ -9,4 +9,8 @@ eureka:
     instance:
         leaseRenewalIntervalInSeconds: 5
 server:
-    port: 9000
+    port: 9005
+
+ribbon:
+  eureka:
+    enabled: true
