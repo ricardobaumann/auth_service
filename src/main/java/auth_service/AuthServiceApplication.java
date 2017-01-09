@@ -21,7 +21,7 @@ import java.security.Principal;
 public class AuthServiceApplication {
 
     public static void main(String[] args) {
-        System.setProperty("spring.config.name", "auth_service");
+        System.setProperty("spring.config.name", "auth");
         SpringApplication.run(AuthServiceApplication.class);
     }
 
