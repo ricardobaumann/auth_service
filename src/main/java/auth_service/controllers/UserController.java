@@ -15,9 +15,7 @@ import java.util.Set;
  */
 @RestController
 @RequestMapping(
-        consumes = "application/json",
-        path = "/users",
-        produces = "application/json")
+        path = "/users")
 public class UserController {
 
     @Autowired
